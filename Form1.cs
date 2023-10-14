@@ -13,6 +13,7 @@ namespace HarmadikNap_Feladat
 
         private void multipleNumber_Click(object sender, EventArgs e)
         {
+            working.Value = 0;
             if (szamMezo.Text.Length > 0 && isNumberValue(szamMezo.Text))
             {
                 working.Maximum = Convert.ToInt32(szamMezo.Text);
@@ -45,6 +46,8 @@ namespace HarmadikNap_Feladat
             int i = 2;
             if (szamMezo.Text.Length > 0 && isNumberValue(szamMezo.Text))
             {
+                eredmenyMezo.Clear();
+                working.Value = 0;
                 if (isPrime(Convert.ToInt32(szamMezo.Text), i))
                 {
                     eredmeny.Text = $"A megadott szám : {szamMezo.Text}\r\nPRIMSZÁM!";
